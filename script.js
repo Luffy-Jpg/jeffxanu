@@ -1,11 +1,9 @@
-const bgMusic = document.getElementById('bg-music');
-const popup = document.getElementById('popup-message');
+function playMusic() {
+  const music = document.getElementById('bg-music');
+  const popup = document.getElementById('popup-message');
 
-function toggleMusic() {
-  if (bgMusic.paused) {
-    bgMusic.play();
-  } else {
-    bgMusic.pause();
+  if (music.paused) {
+    music.play();
   }
 
   popup.style.opacity = 1;
