@@ -1,36 +1,148 @@
-/* ... your existing styles ... */
+Body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif; /* A classic, romantic serif font */
+  color: #5e5e5e; /* Soft, slightly darker gray for text */
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #fdecec; /* Very light pink background */
+}
+
+.overlay {
+  padding: 40px 20px;
+  background: rgba(253, 236, 236, 0.7); /* Light pink with some transparency */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: 'Lovers Quarrel', cursive; /* A beautiful cursive font for headings */
+  font-size: 4em;
+  margin: 0.3em 0 0.1em;
+  color: #e4405f; /* Instagram pink for the main heading */
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #8a8a8a; /* Slightly darker gray for the subtitle */
+  font-style: italic;
+}
+
+.section {
+  margin: 2em 0;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: white; /* White boxes for content sections */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h2 {
+  font-family: 'Playfair Display', serif; /* Another elegant serif font for subheadings */
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #e4405f;
+}
+
+.footer {
+  margin-top: auto;
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.heart-container {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.center-heart {
+  width: 80px; /* Slightly smaller */
+  height: 80px;
+  background: #ff80ab; /* A softer pink */
+  transform: rotate(-45deg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a bit more shadow */
+}
+
+.center-heart::before,
+.center-heart::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #ff80ab;
+  border-radius: 50%;
+}
+
+.center-heart::before {
+  top: -40px;
+  left: 0;
+}
+
+.center-heart::after {
+  left: 40px;
+  top: 0;
+}
+
+.center-heart span {
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
 
 #show-gallery-btn {
-  background-color: #ff5e8e;
+  background-color: #ff80ab; /* Softer pink button */
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px; /* More rounded button */
   cursor: pointer;
   font-size: 1em;
   margin-top: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#show-gallery-btn:hover {
+  background-color: #e6739d; /* Slightly darker on hover */
 }
 
 #image-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px; /* More spacing */
   margin-top: 20px;
   justify-content: center;
 }
 
 #image-gallery img {
-  width: 100px;
-  height: 100px;
+  width: 120px; /* Slightly larger thumbnails */
+  height: 120px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px; /* More rounded thumbnails */
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0.8; /* Slightly more visible initially */
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out; /* Add transform */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #image-gallery img:hover {
   opacity: 1;
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .hidden {
@@ -52,9 +164,10 @@
 }
 
 #lightbox-image {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 5px;
+  max-width: 95%; /* Slightly larger lightbox image */
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
 }
 
 .instagram-button {
@@ -64,12 +177,30 @@
 .instagram-button a {
   background-color: #e4405f; /* Instagram color */
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 25px; /* Slightly larger button */
+  border-radius: 25px; /* More rounded */
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .instagram-button a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+#popup-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffc0cb; /* Light pink for the message */
+  color: #e4405f; /* Darker pink text */
+  padding: 12px 20px;
+  border-radius: 20px; /* Rounded message box */
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1001;
+  font-size: 1em;
 }
