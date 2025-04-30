@@ -1,24 +1,29 @@
-function playMusic() {
-  const music = document.getElementById('bg-music');
-  const popup = document.getElementById('popup-message');
+// ... your existing script.js ...
 
-  if (music.paused) {
-    music.play();
-  } else {
-    music.play(); // Ensure it plays even if it was somehow playing already but didn't trigger the 'play' event properly.
-  }
-
-  popup.style.opacity = 1;
-  setTimeout(() => {
-    popup.style.opacity = 0;
-  }, 2000);
-}
-
-// Autoplay the music when the page loads (some browsers might block this)
 document.addEventListener('DOMContentLoaded', function() {
-  const music = document.getElementById('bg-music');
-  music.play().catch(error => {
-    console.error("Autoplay prevented:", error);
-    console.warn("The music might not play automatically due to browser autoplay policies. User interaction (like clicking the heart) is usually required.");
+  const showGalleryBtn = document.getElementById('show-gallery-btn');
+  const imageGallery = document.getElementById('image-gallery');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const galleryImages = imageGallery.querySelectorAll('img');
+
+  showGalleryBtn.addEventListener('click', function() {
+    imageGallery.classList.toggle('hidden');
+    if (!imageGallery.classList.contains('hidden')) {
+      showGalleryBtn.textContent = 'Close Photos';
+    } else {
+      showGalleryBtn.textContent = 'Show Our Photos';
+    }
+  });
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', function() {
+      lightboxImage.src = this.dataset.full;
+      lightbox.classList.remove('hidden');
+    });
   });
 });
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+}
