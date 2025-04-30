@@ -8,43 +8,37 @@
 </head>
 <body>
 
-  <audio autoplay loop hidden>
+  <!-- Hidden looping music -->
+  <audio autoplay loop id="bg-music">
     <source src="https://audio.jukehost.co.uk/TR6YcIGVpRxzR9rRIoUc5yBY3xXnYJPG" type="audio/mp3">
-    Your browser does not support the audio element.
   </audio>
 
-  <header>
-    <h1>Jeff <span class="heart">❤️</span> Anu</h1>
-    <p class="tagline">Forever and Always</p>
-  </header>
+  <!-- Sections with background images -->
+  <section class="hero" id="hero1">
+    <div class="overlay-text">
+      <h1>Jeff ❤️ Anu</h1>
+      <p>Forever and Always</p>
+    </div>
+  </section>
 
-  <main>
-    <section class="section">
+  <section class="hero" id="hero2">
+    <div class="overlay-text">
       <h2>Our Love Story</h2>
-      <p>From the moment we met, my life changed forever. Your smile lights up my world, and your love fills my heart with joy. This website is a tribute to our beautiful journey together.</p>
-    </section>
+      <p>From the moment we met, my life changed forever. Your smile lights up my world, and your love fills my heart with joy.</p>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>Memorable Moments</h2>
-      <div class="gallery">
-        <img src="https://files.catbox.moe/7go1ta.jpeg" alt="Jeff and Anu 1" />
-        <img src="https://files.catbox.moe/kr1l2r.jpeg" alt="Jeff and Anu 2" />
-        <img src="https://files.catbox.moe/rqpb8i.jpeg" alt="Jeff and Anu 3" />
-      </div>
-    </section>
-
-    <section class="section">
+  <section class="hero" id="hero3">
+    <div class="overlay-text">
       <h2>Our Journey</h2>
-      <p>
-        It all started with a simple hello, and now we're building a life filled with love, laughter, and endless adventures. Every moment with you is a treasure, and I look forward to many more.
-      </p>
-      <p class="sign-off">With all my love, Jeff</p>
-    </section>
-  </main>
+      <p>We started with a simple hello, and now we share a life full of laughter, love, and adventure. With all my love, Jeff.</p>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Jeff & Anu</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
