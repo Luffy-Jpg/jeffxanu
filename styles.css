@@ -1,4 +1,4 @@
-body, html {
+Body, html {
   margin: 0;
   padding: 0;
   font-family: 'Georgia', serif;
@@ -9,7 +9,7 @@ body, html {
 }
 
 .background-slideshow {
-  position: fixed;
+  position: fixed; /* Keep it fixed for the background */
   top: 0;
   left: 0;
   width: 100%;
@@ -32,6 +32,10 @@ body, html {
   background: rgba(0, 0, 0, 0.4);
   text-align: center;
   min-height: 100vh;
+  display: flex; /* To center content vertically */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top initially */
 }
 
 h1 {
@@ -46,6 +50,9 @@ h1 {
 
 .section {
   margin: 2em 0;
+  max-width: 80%; /* Added for better readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2 {
@@ -54,23 +61,27 @@ h2 {
 }
 
 .footer {
-  margin-top: 3em;
+  margin-top: auto; /* Push footer to the bottom */
   font-size: 1.2em;
 }
 
+/* Container for the heart to control its position in the flow */
+.heart-container {
+  margin: 2em 0; /* Adjust spacing as needed */
+  display: flex;
+  justify-content: center; /* Center the heart horizontally */
+}
+
 .center-heart {
-  position: fixed;
-  top: 50%;
-  left: 50%;
   width: 100px;
   height: 100px;
   background: red;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  z-index: 10;
+  transform: rotate(-45deg); /* Keep the rotation */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative; /* Needed for pseudo-element positioning */
 }
 
 .center-heart::before,
