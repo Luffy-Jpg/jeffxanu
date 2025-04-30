@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>𝐽𝛯𝐹𝐹 ♡ 𝛥𝛮𝑈</title>
   <link rel="stylesheet" href="styles.css" />
-</head>
+  <link rel="stylesheet" href="lightbox.css" /> </head>
 <body>
   <div class="overlay">
     <h1>𝐽𝛯𝐹𝐹 ♡ 𝛥𝛮𝑈</h1>
@@ -18,7 +18,7 @@
 
     <section class="section">
       <h2>Our Journey</h2>
-      <p>We built a life filled with love, laughter, and memories that last a lifetime. I love you endlessly, Anu....As i always tell..You make everything beautiful.</p>
+      <p>We built a life filled with love, laughter, and memories that last a lifetime. I love you endlessly, Anu....As i always say.. You make everything beautiful 💖🎀</p>
     </section>
 
     <div class="heart-container">
@@ -27,16 +27,35 @@
       </div>
     </div>
 
+    <button id="show-gallery-btn">Show Our Photos</button>
+
+    <div id="image-gallery" class="hidden">
+      <img src="https://files.catbox.moe/7go1ta.jpeg" alt="Photo 1" data-full="https://files.catbox.moe/k5t3zb.jpeg">
+      <img src="https://files.catbox.moe/kr1l2r.jpeg" alt="Photo 2" data-full="https://files.catbox.moe/kr1l2r.jpeg">
+      <img src="https://files.catbox.moe/rqpb8i.jpeg" alt="Photo 3" data-full="https://files.catbox.moe/rqpb8i.jpeg">
+      <img src="https://files.catbox.moe/k5t3zb.jpeg" alt="Photo 4" data-full="https://files.catbox.moe/k5t3zb.jpeg">
+      </div>
+
     <p class="footer">With love, Jeff © 2025</p>
+
+    <div class="instagram-button">
+      <a href="https://www.instagram.com/jeffxanu" target="_blank" rel="noopener noreferrer">
+        Follow us on Instagram
+      </a>
+    </div>
   </div>
 
-  <div id="popup-message">I WILL ALWAYS CHOOSE YOU</div>
+  <div id="popup-message">ANU, I WILL ALWAYS CHOOSE YOU</div>
 
   <audio id="bg-music" loop>
     <source src="https://audio.jukehost.co.uk/TR6YcIGVpRxzR9rRIoUc5yBY3xXnYJPG" type="audio/mp3">
     Your browser does not support audio.
   </audio>
 
+  <div id="lightbox" class="hidden" onclick="closeLightbox()">
+    <img id="lightbox-image" src="" alt="Full Image">
+  </div>
+
   <script src="script.js"></script>
-</body>
+  <script src="gallery.js"></script> </body>
 </html>
