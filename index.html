@@ -7,39 +7,37 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="background-slideshow"></div>
 
-  <!-- Hidden looping music -->
-  <audio autoplay loop id="bg-music">
-    <source src="https://audio.jukehost.co.uk/TR6YcIGVpRxzR9rRIoUc5yBY3xXnYJPG" type="audio/mp3">
-  </audio>
+  <div class="overlay">
+    <h1>Jeff ❤️ Anu</h1>
+    <p class="subtitle">Together Forever</p>
 
-  <!-- Heart animation -->
-  <div class="hearts"></div>
-
-  <section class="hero" id="hero1">
-    <div class="overlay-text">
-      <h1>Jeff <span class="heart">❤️</span> Anu</h1>
-      <p>Together Forever</p>
-    </div>
-  </section>
-
-  <section class="hero" id="hero2">
-    <div class="overlay-text">
+    <section class="section">
       <h2>Our Love Story</h2>
       <p>From our first hello to now, every moment with you feels like magic. You’re my heart’s favorite place.</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="hero" id="hero3">
-    <div class="overlay-text">
+    <section class="section">
       <h2>Our Journey</h2>
       <p>We built a life filled with love, laughter, and memories that last a lifetime. I love you endlessly, Anu.</p>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>With love, Jeff © 2025</p>
-  </footer>
+    <p class="footer">With love, Jeff © 2025</p>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- Music Player -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://audio.jukehost.co.uk/TR6YcIGVpRxzR9rRIoUc5yBY3xXnYJPG" type="audio/mp3" />
+    Your browser does not support audio.
+  </audio>
+
+  <div class="music-control">
+    <button onclick="toggleMusic()">Pause/Play Music</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
