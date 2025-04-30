@@ -1,71 +1,78 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom, #fff1f1, #ffe6e6);
   color: #333;
   line-height: 1.6;
-  text-align: center;
-  padding: 20px;
 }
 
-/* Header styles */
 header {
-  background-color: #ff69b4;
-  color: white;
-  padding: 40px 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff0f5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-header p {
-  font-size: 1.2em;
+.heart {
+  color: red;
+  animation: pulse 1.5s infinite;
 }
 
-/* Section styles */
-section {
-  margin-bottom: 40px;
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
-.introduction, .story {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
 }
 
-.gallery-container {
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #c94f7c;
+  font-size: 1.8rem;
+}
+
+.gallery {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
 }
 
-.gallery-container img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.gallery-container img:hover {
+.gallery img:hover {
   transform: scale(1.05);
 }
 
-/* Footer styles */
+.sign-off {
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
 footer {
-  margin-top: 50px;
-  font-size: 1.1em;
-  color: #555;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fcdede;
+  font-size: 0.9rem;
 }
