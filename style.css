@@ -5,9 +5,10 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
-  color: white;
-  background: #000;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffeef2;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -34,26 +35,46 @@ body {
 }
 
 .overlay-text {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 192, 203, 0.6);
   padding: 2rem;
-  border-radius: 10px;
-  max-width: 80%;
+  border-radius: 15px;
+  max-width: 90%;
+  backdrop-filter: blur(5px);
 }
 
 .overlay-text h1, .overlay-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #fff5f9;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .overlay-text p {
   font-size: 1.2rem;
-  line-height: 1.5;
+  color: #fff;
+  text-shadow: 1px 1px 2px #333;
 }
 
 footer {
-  background-color: #111;
+  background-color: #ffc0cb;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Floating Hearts */
+.hearts::before, .hearts::after {
+  content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  animation: floatHearts 5s infinite linear;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-100vh); opacity: 0; }
 }
