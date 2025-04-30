@@ -20,16 +20,6 @@ Body, html {
   background-position: center;
 }
 
-/* Remove the slideshow animation */
-/*
-@keyframes slideshow {
-  0%   { background-image: url('https://files.catbox.moe/7go1ta.jpeg'); }
-  33%  { background-image: url('https://files.catbox.moe/kr1l2r.jpeg'); }
-  66%  { background-image: url('https://files.catbox.moe/rqpb8i.jpeg'); }
-  100% { background-image: url('https://files.catbox.moe/7go1ta.jpeg'); }
-}
-*/
-
 .overlay {
   padding: 40px 20px;
   background: rgba(0, 0, 0, 0.4);
